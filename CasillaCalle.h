@@ -14,7 +14,7 @@ namespace civitas
 			const static int FACTORALQUILERCALLE = 1, FACTORALQUILERCASA = 1, FACTORALQUILERHOTEL = 4;
 			Jugador propietario;
 		public:
-			CasillaCalle(string n, int precio_Compra, int precio_Edificar, int precio_Base_alquiler) : Casilla(n);
+			CasillaCalle(string n, int precio_Compra, int precio_Edificar, int precio_Base_alquiler);
 	};
 
 }
