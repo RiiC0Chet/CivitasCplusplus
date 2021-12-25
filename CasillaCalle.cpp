@@ -10,28 +10,28 @@ civitas::CasillaCalle::CasillaCalle(string n, int precio_Compra, int precio_Edif
     this->numHoteles = 0;
 }
 
-bool civitas::CasillaCalle::comprar(Jugador jugador)
+bool civitas::CasillaCalle::comprar(Jugador &jugador)
 {
     (&propietario) = (&jugador);
     jugador.paga(getPrecioCompra());
     return true;
 }
 
-bool civitas::CasillaCalle::construirCasa(Jugador jugador)
+bool civitas::CasillaCalle::construirCasa(Jugador &jugador)
 {
     jugador.paga(precioEdificar);
     numCasas++;
     return true;
 }
 
-bool civitas::CasillaCalle::construirHotel(Jugador jugador)
+bool civitas::CasillaCalle::construirHotel(Jugador &jugador)
 {
     this->propietario.paga(precioEdificar);
     numHoteles++;
     return true;
 }
 
-bool civitas::CasillaCalle::derruirCasas(int numero, Jugador jugador)
+bool civitas::CasillaCalle::derruirCasas(int numero, Jugador &jugador)
 {
     if (this->esEsteElPropietario(jugador) && numCasas >= numero) 
     {
@@ -41,7 +41,7 @@ bool civitas::CasillaCalle::derruirCasas(int numero, Jugador jugador)
     else return false;
 }
 
-bool civitas::CasillaCalle::esEsteElPropietario(Jugador jugador)
+bool civitas::CasillaCalle::esEsteElPropietario(Jugador &jugador)
 {
     if ((&jugador) == (&propietario))
         return true;
@@ -50,6 +50,6 @@ bool civitas::CasillaCalle::esEsteElPropietario(Jugador jugador)
 
 void recibeJugador(int i_actual, vector<Jugador> todos);
 bool tienePropietario();
-void tramitarAlquiler(Jugador jugador);
-bool igualdadEstado(CasillaCalle otraCasilla);
+void tramitarAlquiler(Jugador& jugador);
+bool igualdadEstado(CasillaCalle &otraCasilla);
 string toString();

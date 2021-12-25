@@ -15,11 +15,11 @@ namespace civitas
 			Jugador propietario;
 		public:
 			CasillaCalle(string n, int precio_Compra, int precio_Edificar, int precio_Base_alquiler);
-			bool comprar(Jugador jugador);
-			bool construirCasa(Jugador jugador);
-			bool construirHotel(Jugador jugador);
-			bool derruirCasas(int numero, Jugador jugador);
-			bool esEsteElPropietario(Jugador jugador);
+			bool comprar(Jugador &jugador);
+			bool construirCasa(Jugador &jugador);
+			bool construirHotel(Jugador &jugador);
+			bool derruirCasas(int numero, Jugador &jugador);
+			bool esEsteElPropietario(Jugador &jugador);
 
 			inline int cantidadCasasHoteles()
 			{
@@ -53,8 +53,8 @@ namespace civitas
 
 			void recibeJugador(int i_actual, vector<Jugador> todos);
 			bool tienePropietario();
-			void tramitarAlquiler(Jugador jugador);
-			bool igualdadEstado(CasillaCalle otraCasilla);
+			void tramitarAlquiler(Jugador &jugador);
+			bool igualdadEstado(CasillaCalle &otraCasilla);
 
 			inline void actualizaPropietarioPorConversion(Jugador nuevo)
 			{
