@@ -100,10 +100,10 @@ bool civitas::CasillaCalle::igualdadEstado(CasillaCalle& otraCasilla)
         else return false;
     }
 }
-string civitas::CasillaCalle::toString():Casilla() // Ta mal
+string civitas::CasillaCalle::toString()
 {
     if (this->propietario == nullptr)
-        return (". Precios: Compra: " + precioCompra + ", Edificar: " + precioEdificar + ", Alquiler base: " + precioBaseAlquiler + ", Alquiler Completo: " + getPrecioAlquilerCompleto() + ", Casas: " + numCasas + ", Hoteles: " + numHoteles);
-    else return  (" con el propietario " + propietario.getNombre());
-
+        return (Casilla::toString()+". Precios: Compra: " + std::to_string(precioCompra) + ", Edificar: " + std::to_string(precioEdificar) + ", Alquiler base: " + std::to_string(precioBaseAlquiler) + ", Alquiler Completo: " + std::to_string(getPrecioAlquilerCompleto()) + ", Casas: " + std::to_string(numCasas) + ", Hoteles: " + std::to_string(numHoteles) );
+    else 
+        return  (Casilla::toString()+" con el propietario " + propietario.getNombre());
 }
