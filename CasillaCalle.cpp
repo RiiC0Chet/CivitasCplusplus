@@ -1,6 +1,6 @@
 #include "CasillaCalle.h"
 
-civitas::CasillaCalle::CasillaCalle(string n, int precio_Compra, int precio_Edificar, int precio_Base_alquiler):Casilla(n)
+civitas::CasillaCalle::CasillaCalle(string n, float precio_Compra, float precio_Edificar, float precio_Base_alquiler):Casilla(n)
 {
 	this->propietario = nullptr;
     this->precioCompra = precio_Compra;

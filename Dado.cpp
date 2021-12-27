@@ -1,4 +1,7 @@
 #include "Dado.h"
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
 
 civitas::Dado:: Dado(bool d) :debug(d), ultimoResultado(0)
 {
@@ -11,4 +14,30 @@ const civitas::Dado* civitas::Dado::getInstance(bool d)
 		instance = new Dado(d);
 
 	return instance;
+}
+
+
+int civitas::Dado::tirar()
+{
+	// Iniciando el generador con una semilla 
+	srand((unsigned)time(0));
+
+	if (!debug)// Generando un número aleatorio en el rango [0,7)
+		ultimoResultado = (rand() % 6)+1;
+	else
+		ultimoResultado = 1;
+	return ultimoResultado;
+}
+
+int civitas::Dado::quienEmpieza(int n)
+{
+	return (rand() % n);
+}
+
+void civitas::Dado::setDebug(bool d)
+{
+	debug = d;
+
+	if (debug)
+		Diario.getInstance().ocurreEvento("Se ha establecido el modo debug del dado.");
 }

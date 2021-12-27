@@ -9,16 +9,25 @@ namespace civitas
 
 			int ultimoResultado;
 			bool debug;
-		public:
-			Dado(bool d);
 
+			// Constructor privado en clases singletong
+			Dado(bool d);
+		public:
+			
 			//Un singleton no ha de ser clonable
 			Dado(Dado& otroDado) = delete;
 			//Un singleton no ha de ser asignable
 			void operator=(const Dado&) = delete;
 
 			static const Dado* getInstance(bool d);
+			int tirar();
+			int quienEmpieza(int n);
+			void setDebug(bool d);
 
+			inline int getUltimoResultado()
+			{
+				return ultimoResultado;
+			}
 	};
 }
 

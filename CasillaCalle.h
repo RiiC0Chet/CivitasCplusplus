@@ -15,7 +15,7 @@ namespace civitas
 			const static int FACTORALQUILERCALLE = 1, FACTORALQUILERCASA = 1, FACTORALQUILERHOTEL = 4;
 			Jugador propietario;
 		public:
-			CasillaCalle(string n, int precio_Compra, int precio_Edificar, int precio_Base_alquiler);
+			CasillaCalle(string n, float precio_Compra, float precio_Edificar, float precio_Base_alquiler);
 			bool comprar(Jugador &jugador);
 			bool construirCasa(Jugador &jugador);
 			bool construirHotel(Jugador &jugador);

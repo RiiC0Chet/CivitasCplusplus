@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "Diario.h"
 
 using namespace std;
 
@@ -24,7 +25,7 @@ namespace civitas
 
 		inline void informe(int i_actual, vector<Jugador> todos) 
 		{
-			Diario.getInstance().ocurreEvento("El jugador " + todos.at(i_actual).getNombre() + " ha caido en la casilla: " + this->toString());
+			Diario::getInstance()->ocurreEvento("El jugador " + todos.at(i_actual).getNombre() + " ha caido en la casilla: " + this->toString());
 		}
 
 		inline void recibeJugador(int i_actual, vector<Jugador> todos)
