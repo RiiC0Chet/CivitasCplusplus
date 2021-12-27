@@ -6,7 +6,7 @@ civitas::CasillaSorpresa::CasillaSorpresa(string nombre, MazoSorpresa &mazo):Cas
 	this->mazo = mazo;
 }
 
-void civitas::CasillaSorpresa::recibeJugador(int i_actual, vector<Jugador> todos)
+void civitas::CasillaSorpresa::recibeJugador(int i_actual, vector<Jugador*> todos)
 {
 	sorpresa = mazo.siguiente();
 	informe(i_actual, todos);

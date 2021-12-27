@@ -31,6 +31,9 @@ int civitas::Dado::tirar()
 
 int civitas::Dado::quienEmpieza(int n)
 {
+	// Iniciando el generador con una semilla 
+	srand((unsigned)time(0));
+
 	return (rand() % n);
 }
 
@@ -39,5 +42,5 @@ void civitas::Dado::setDebug(bool d)
 	debug = d;
 
 	if (debug)
-		Diario.getInstance().ocurreEvento("Se ha establecido el modo debug del dado.");
+		Diario::getInstance()->ocurreEvento("Se ha establecido el modo debug del dado.");
 }

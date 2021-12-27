@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include "Diario.h"
+#include "Jugador.h"
 
 using namespace std;
 
@@ -23,12 +24,12 @@ namespace civitas
 			return nombre;
 		}
 
-		inline void informe(int i_actual, vector<Jugador> todos) 
+		inline void informe(int i_actual, vector<Jugador*> todos) 
 		{
-			Diario::getInstance()->ocurreEvento("El jugador " + todos.at(i_actual).getNombre() + " ha caido en la casilla: " + this->toString());
+			Diario::getInstance()->ocurreEvento("El jugador " + todos.at(i_actual)->getNombre() + " ha caido en la casilla: " + this->toString());
 		}
 
-		inline void recibeJugador(int i_actual, vector<Jugador> todos)
+		inline void recibeJugador(int i_actual, vector<Jugador*> todos)
 		{
 			informe(i_actual, todos);
 		}

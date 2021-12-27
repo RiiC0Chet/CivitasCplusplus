@@ -13,7 +13,7 @@ namespace civitas
 			MazoSorpresa mazo;
 		public:
 			CasillaSorpresa(string nombre, MazoSorpresa &mazo);
-			void recibeJugador(int i_actual, vector<Jugador> todos);
+			void recibeJugador(int i_actual, vector<Jugador*> todos);
 			bool igualdadEstado(CasillaSorpresa &otraCasilla);
 			inline string toString() 
 			{

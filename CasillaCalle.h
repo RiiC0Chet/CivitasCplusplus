@@ -2,6 +2,7 @@
 #include "iostream"
 #include "Casilla.h"
 
+
 using namespace std;
 
 namespace civitas
@@ -13,7 +14,7 @@ namespace civitas
 			int numCasas, numHoteles;
 
 			const static int FACTORALQUILERCALLE = 1, FACTORALQUILERCASA = 1, FACTORALQUILERHOTEL = 4;
-			Jugador propietario;
+			Jugador *propietario;
 		public:
 			CasillaCalle(string n, float precio_Compra, float precio_Edificar, float precio_Base_alquiler);
 			bool comprar(Jugador &jugador);
@@ -52,14 +53,14 @@ namespace civitas
 				return (precioBaseAlquiler * (FACTORALQUILERCASA + numCasas + numHoteles * FACTORALQUILERHOTEL));
 			}
 
-			void recibeJugador(int i_actual, vector<Jugador> todos);
+			void recibeJugador(int i_actual, vector<Jugador*> todos);
 			bool tienePropietario();
 			void tramitarAlquiler(Jugador &jugador);
 			bool igualdadEstado(CasillaCalle &otraCasilla);
 
-			inline void actualizaPropietarioPorConversion(Jugador nuevo)
+			inline void actualizaPropietarioPorConversion(Jugador &nuevo)
 			{
-				this->propietario = nuevo;
+				this->propietario = &nuevo;
 			}
 
 			string toString();
