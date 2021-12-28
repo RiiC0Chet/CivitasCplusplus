@@ -1,7 +1,9 @@
-#pragma once
+//#pragma once
 #include <string>
 #include <vector>
 
+#ifndef DIARIO_H
+#define DIARIO_H
 using namespace std;
 
 namespace civitas
@@ -47,3 +49,4 @@ namespace civitas
 }
 
 
+#endif

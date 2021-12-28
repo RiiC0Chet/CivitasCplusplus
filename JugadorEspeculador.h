@@ -1,6 +1,10 @@
-#pragma once
-#include "Jugador.h"
+//#pragma once
+//#include "Jugador.h"
 #include <string>
+
+#ifndef JUGADORESPECULADOR_H
+#define JUGADORESPECULADOR_H
+
 using namespace std;
 
 namespace civitas
@@ -57,3 +61,4 @@ namespace civitas
 }
 
 
+#endif

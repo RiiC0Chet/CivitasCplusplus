@@ -1,6 +1,10 @@
-#pragma once
+//#pragma once
 #include <vector>
-#include "Diario.h"
+//#include "Diario.h"
+//#include "sorpresa.h"
+
+#ifndef MAZOSORPRESA_H
+#define MAZOSORPRESA_H
 
 using namespace std;
 namespace civitas
@@ -24,3 +28,4 @@ namespace civitas
 
 }
 
+#endif

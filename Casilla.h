@@ -1,9 +1,12 @@
-#pragma once
+//#pragma once
 #include <string>
 #include <vector>
-#include "Diario.h"
-#include "Jugador.h"
+//#include "Diario.h"
+//#include "Jugador.h"
 
+
+#ifndef CASILLA_H
+#ifdef CASILLA_H 
 using namespace std;
 
 namespace civitas
@@ -47,4 +50,4 @@ namespace civitas
 
 }
 
-
+#endif

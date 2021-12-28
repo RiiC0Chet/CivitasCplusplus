@@ -148,6 +148,7 @@
     <ClCompile Include="Jugador.cpp" />
     <ClCompile Include="JugadorEspeculador.cpp" />
     <ClCompile Include="MazoSorpresa.cpp" />
+    <ClCompile Include="Sorpresa.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +161,7 @@
     <ClInclude Include="JugadorEspeculador.h" />
     <ClInclude Include="MazoSorpresa.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Sorpresa.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CivitasC++.rc" />

@@ -1,8 +1,9 @@
-#pragma once
-#include "iostream"
-#include "Casilla.h"
+//#pragma once
+#include <iostream>
+//#include "Casilla.h"
 
-
+#ifndef CASILLACALLE_H
+#ifdef CASILLACALLE_H 
 using namespace std;
 
 namespace civitas
@@ -68,3 +69,4 @@ namespace civitas
 
 }
 
+#endif

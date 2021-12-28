@@ -1,5 +1,8 @@
-#pragma once
-#include "Diario.h"
+//#pragma once
+//#include "Diario.h"
+
+#ifndef DADO_H
+#define DADO_H
 
 namespace civitas
 {
@@ -33,3 +36,4 @@ namespace civitas
 }
 
 
+#endif

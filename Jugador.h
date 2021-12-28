@@ -1,7 +1,10 @@
-#pragma once
+//#pragma once
 #include <string>
 #include <vector>
-#include "CasillaCalle.h"
+//#include "CasillaCalle.h"
+
+#ifndef JUGADOR_H
+#define JUGADOR_H
 
 using namespace std;
 
@@ -154,3 +157,4 @@ namespace civitas
 
 }
 
+#endif

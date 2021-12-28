@@ -1,6 +1,9 @@
-#pragma once
+//#pragma once
 #include "iostream"
-#include "Casilla.h"
+//#include "Casilla.h"
+
+#ifndef CASILLASORPRESA_H
+#ifdef CASILLASORPRESA_H 
 
 using namespace std;
 
@@ -22,3 +25,4 @@ namespace civitas
 	};
 }
 
+#endif
