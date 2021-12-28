@@ -60,7 +60,7 @@ namespace civitas
 
 			inline void actualizaPropietarioPorConversion(Jugador &nuevo)
 			{
-				this->propietario = &nuevo;
+				propietario = &nuevo;
 			}
 
 			string toString();

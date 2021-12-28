@@ -103,7 +103,7 @@ bool civitas::Jugador::construirCasa(int ip)
         if (puedoEdificar) 
         {
             result = propiedad->construirCasa(*this);
-            Diario::getInstance()->ocurreEvento("El jugador " + nombre + " contruye casa en la propiedad " + ip);
+            Diario::getInstance()->ocurreEvento("El jugador " + nombre + " contruye casa en la propiedad " + to_string(ip) );
         }
 
     }

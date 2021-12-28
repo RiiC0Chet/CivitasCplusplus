@@ -2,8 +2,8 @@
 
 civitas::CasillaSorpresa::CasillaSorpresa(string nombre, MazoSorpresa &mazo):Casilla(nombre)
 {
-	this->sorpresa = nullptr;
-	this->mazo = mazo;
+	sorpresa = nullptr;
+	mazo = mazo;
 }
 
 void civitas::CasillaSorpresa::recibeJugador(int i_actual, vector<Jugador*> todos)

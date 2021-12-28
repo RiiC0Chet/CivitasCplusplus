@@ -146,6 +146,8 @@
     <ClCompile Include="Dado.cpp" />
     <ClCompile Include="Diario.cpp" />
     <ClCompile Include="Jugador.cpp" />
+    <ClCompile Include="JugadorEspeculador.cpp" />
+    <ClCompile Include="MazoSorpresa.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +157,8 @@
     <ClInclude Include="Dado.h" />
     <ClInclude Include="Diario.h" />
     <ClInclude Include="Jugador.h" />
+    <ClInclude Include="JugadorEspeculador.h" />
+    <ClInclude Include="MazoSorpresa.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

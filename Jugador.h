@@ -18,8 +18,6 @@ namespace civitas
             
             float saldo;
 
-            
-             
             vector< CasillaCalle* > propiedades;
 
             /*
