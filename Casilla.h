@@ -1,12 +1,15 @@
 //#pragma once
-#include <string>
-#include <vector>
-//#include "Diario.h"
-//#include "Jugador.h"
-
 
 #ifndef CASILLA_H
-#ifdef CASILLA_H 
+#define CASILLA_H 
+
+#include <string>
+#include <vector>
+#include "Diario.h"
+#include "Jugador.h"
+
+//class Jugador;
+
 using namespace std;
 
 namespace civitas

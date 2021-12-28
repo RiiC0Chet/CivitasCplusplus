@@ -3,14 +3,14 @@
 civitas::CasillaSorpresa::CasillaSorpresa(string nombre, MazoSorpresa &mazo):Casilla(nombre)
 {
 	sorpresa = nullptr;
-	mazo = mazo;
+	mazo = &mazo;
 }
 
 void civitas::CasillaSorpresa::recibeJugador(int i_actual, vector<Jugador*> todos)
 {
-	sorpresa = mazo.siguiente();
+	sorpresa = mazo->siguiente() ;
 	informe(i_actual, todos);
-	sorpresa.aplicarAJugador(i_actual, todos);
+	sorpresa->aplicarAJugador(i_actual, todos);
 }
 
 bool civitas::CasillaSorpresa::igualdadEstado(CasillaSorpresa &otraCasilla)
@@ -19,7 +19,7 @@ bool civitas::CasillaSorpresa::igualdadEstado(CasillaSorpresa &otraCasilla)
         return true;
     else 
     {
-        if ( &sorpresa == &otraCasilla.sorpresa && &mazo == &otraCasilla.mazo) 
+        if ( sorpresa == otraCasilla.sorpresa && mazo == otraCasilla.mazo) 
             return true;
         else 
             return false;

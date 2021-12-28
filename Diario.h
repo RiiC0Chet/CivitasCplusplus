@@ -1,9 +1,12 @@
 //#pragma once
-#include <string>
-#include <vector>
 
 #ifndef DIARIO_H
 #define DIARIO_H
+
+#include <string>
+#include <vector>
+
+
 using namespace std;
 
 namespace civitas
@@ -24,7 +27,7 @@ namespace civitas
 		public:
 
 			//Un singleton no ha de ser clonable
-			Diario(Diario& otroDado) = delete;
+			Diario(Diario&) = delete;
 			//Un singleton no ha de ser asignable
 			void operator=(const Diario&) = delete;
 

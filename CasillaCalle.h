@@ -1,9 +1,12 @@
 //#pragma once
-#include <iostream>
-//#include "Casilla.h"
 
 #ifndef CASILLACALLE_H
-#ifdef CASILLACALLE_H 
+#define CASILLACALLE_H 
+
+#include <iostream>
+#include "Casilla.h"
+
+
 using namespace std;
 
 namespace civitas

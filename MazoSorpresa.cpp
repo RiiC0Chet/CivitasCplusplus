@@ -33,7 +33,7 @@ void civitas::MazoSorpresa::alMazo(Sorpresa& s)
         
 }
 
-Sorpresa& civitas::MazoSorpresa::siguiente()
+civitas::Sorpresa* civitas::MazoSorpresa::siguiente()
 {
     if (!barajada || usadas == sorpresas.size())
     {
@@ -46,7 +46,7 @@ Sorpresa& civitas::MazoSorpresa::siguiente()
         usadas = 0;
     }
 
-    Sorpresa auxiliar = sorpresas.at(usadas);
+    Sorpresa *auxiliar = sorpresas.at(usadas);
     usadas++;
 
 

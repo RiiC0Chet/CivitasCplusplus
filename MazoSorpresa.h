@@ -1,10 +1,12 @@
 //#pragma once
-#include <vector>
-//#include "Diario.h"
-//#include "sorpresa.h"
-
 #ifndef MAZOSORPRESA_H
 #define MAZOSORPRESA_H
+
+#include <vector>
+//#include "Diario.h"
+#include "sorpresa.h"
+
+
 
 using namespace std;
 namespace civitas
@@ -23,7 +25,7 @@ namespace civitas
 			MazoSorpresa(bool d);
 			MazoSorpresa();
 			void alMazo(Sorpresa &s);
-			Sorpresa& siguiente();
+			Sorpresa* siguiente();
 	};
 
 }

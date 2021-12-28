@@ -1,9 +1,16 @@
 //#pragma once
-#include "iostream"
-//#include "Casilla.h"
 
 #ifndef CASILLASORPRESA_H
-#ifdef CASILLASORPRESA_H 
+#define CASILLASORPRESA_H 
+
+#include <iostream>
+#include "Casilla.h"
+#include "sorpresa.h"
+#include "MazoSorpresa.h"
+
+//class Sorpresa;
+//class MazoSorpresa;
+
 
 using namespace std;
 
@@ -12,8 +19,8 @@ namespace civitas
 	class CasillaSorpresa : public Casilla
 	{
 		private:
-			Sorpresa sorpresa;
-			MazoSorpresa mazo;
+			Sorpresa *sorpresa;
+			MazoSorpresa *mazo;
 		public:
 			CasillaSorpresa(string nombre, MazoSorpresa &mazo);
 			void recibeJugador(int i_actual, vector<Jugador*> todos);

@@ -1,9 +1,12 @@
 //#pragma once
-//#include "Jugador.h"
-#include <string>
 
 #ifndef JUGADORESPECULADOR_H
 #define JUGADORESPECULADOR_H
+
+#include "Jugador.h"
+#include <string>
+#include "Diario.h"
+
 
 using namespace std;
 
@@ -14,12 +17,6 @@ namespace civitas
 		private:
 			static const int FACTORESPECULADOR = 2;
 		protected:
-			inline JugadorEspeculador(string nombre) : Jugador(nombre) {}
-
-            inline JugadorEspeculador(Jugador otro): Jugador(otro)
-            {
-                actualizaPropiedadesPorConversion(*this);
-            }
 
             inline JugadorEspeculador* convertir()
             {
@@ -27,6 +24,13 @@ namespace civitas
                 return nullptr;
             }
 		public:
+
+            inline JugadorEspeculador(string nombre) : Jugador(nombre) {}
+
+            inline JugadorEspeculador(Jugador &otro) : Jugador(otro)
+            {
+                actualizaPropiedadesPorConversion(*this);
+            }
             inline int getHOTELESMAX() 
             {
                 return HOTELESMAX * FACTORESPECULADOR;

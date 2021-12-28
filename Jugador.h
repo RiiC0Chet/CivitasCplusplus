@@ -1,10 +1,13 @@
 //#pragma once
-#include <string>
-#include <vector>
-//#include "CasillaCalle.h"
 
 #ifndef JUGADOR_H
 #define JUGADOR_H
+
+#include <string>
+#include <vector>
+
+class JugadorEspeculador;
+class CasillaCalle;
 
 using namespace std;
 
@@ -73,7 +76,7 @@ namespace civitas
              * 
              * @return JugadorEspeculador
              */
-            JugadorEspeculador& convertir();
+            JugadorEspeculador* convertir();
         public:
             Jugador(string nombre);
             int cantidadCasasHoteles();
@@ -158,3 +161,5 @@ namespace civitas
 }
 
 #endif
+
+

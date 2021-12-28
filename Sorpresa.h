@@ -1,9 +1,12 @@
 //#pragma once
-#include <string>
-//#include "Jugador.h"
 
 #ifndef SORPRESA_H
 #define SORPRESA_H
+
+#include <string>
+#include "Jugador.h"
+#include "Diario.h"
+
 namespace civitas
 {
 	class Sorpresa

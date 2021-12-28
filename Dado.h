@@ -1,8 +1,11 @@
 //#pragma once
-//#include "Diario.h"
 
 #ifndef DADO_H
 #define DADO_H
+
+#include "Diario.h"
+
+
 
 namespace civitas
 {
@@ -19,7 +22,7 @@ namespace civitas
 		public:
 			
 			//Un singleton no ha de ser clonable
-			Dado(Dado& otroDado) = delete;
+			Dado(Dado&) = delete;
 			//Un singleton no ha de ser asignable
 			void operator=(const Dado&) = delete;
 
