@@ -70,13 +70,7 @@ namespace civitas
              * @param otro, de tipo Jugador
              */
             Jugador(Jugador &otro);
-            /**
-             * 
-             * @brief Funcion con la que convertimosjugadores a JugadoresEspeculadores
-             * 
-             * @return JugadorEspeculador
-             */
-             JugadorEspeculador* convertir();
+            
         public:
             Jugador(string nombre);
             int cantidadCasasHoteles();
@@ -151,6 +145,14 @@ namespace civitas
             {
                 return false;
             }
+
+            /**
+             *
+             * @brief Funcion con la que convertimosjugadores a JugadoresEspeculadores
+             *
+             * @return JugadorEspeculador
+             */
+            Jugador* convertir();
 
             inline string toString()
             {

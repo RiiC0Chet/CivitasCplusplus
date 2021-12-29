@@ -1,6 +1,8 @@
 #include "JugadorEspeculador.h"
 #include "CasillaCalle.h"
 
+using namespace civitas;
+
 void civitas::JugadorEspeculador::actualizaPropiedadesPorConversion(Jugador& jugador)
 {
 	for (int i = 0; i < this->getPropiedades().size(); i++)

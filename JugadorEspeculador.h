@@ -2,8 +2,8 @@
 #ifndef JUGADORESPECULADOR_H
 #define JUGADORESPECULADOR_H
 
-#include "Jugador.h"
 #include <string>
+#include "Jugador.h"
 #include "Diario.h"
 
 

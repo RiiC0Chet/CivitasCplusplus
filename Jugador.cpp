@@ -2,6 +2,8 @@
 #include "JugadorEspeculador.h"
 #include "CasillaCalle.h"
 
+using namespace civitas;
+
 bool civitas::Jugador::existeLaPropiedad(int ip)
 {
     if (propiedades.at(ip)->esEsteElPropietario(*this))
@@ -210,10 +212,9 @@ bool civitas::Jugador::tieneAlgoQueGestionar()
         return false;
 }
 
-civitas::JugadorEspeculador* civitas::Jugador::convertir()
+civitas::Jugador* civitas::Jugador::convertir()
 {
     Diario::getInstance()->ocurreEvento("El jugador " + nombre + " se ha convertido en especulador.");
-    JugadorEspeculador *aux= new JugadorEspeculador(*this);
 
-    return aux;
+    return new JugadorEspeculador(*this);
 }
