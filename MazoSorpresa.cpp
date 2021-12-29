@@ -26,10 +26,10 @@ civitas::MazoSorpresa::MazoSorpresa()
     debug = false;
 }
 
-void civitas::MazoSorpresa::alMazo(Sorpresa& s)
+void civitas::MazoSorpresa::alMazo(Sorpresa* s)
 {
     if (!barajada)
-        sorpresas.push_back(&s);
+        sorpresas.push_back(s);
         
 }
 

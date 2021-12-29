@@ -24,7 +24,7 @@ namespace civitas
 		public:
 			MazoSorpresa(bool d);
 			MazoSorpresa();
-			void alMazo(Sorpresa &s);
+			void alMazo(Sorpresa *s);
 			Sorpresa* siguiente();
 	};
 

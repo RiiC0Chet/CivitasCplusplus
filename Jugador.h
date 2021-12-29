@@ -6,13 +6,15 @@
 #include <string>
 #include <vector>
 
-class JugadorEspeculador;
-class CasillaCalle;
 
 using namespace std;
 
 namespace civitas
 {
+    class JugadorEspeculador;
+    class CasillaCalle;
+
+
 	class Jugador
 	{
         private:           

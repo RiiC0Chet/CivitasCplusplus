@@ -1,10 +1,11 @@
 #include "Diario.h"
 civitas::Diario* civitas::Diario::getInstance()
 {
-	if (instance == nullptr)
-		instance = new Diario();
+	//if (instance == nullptr)
+		//instance = new Diario();
 
-	return instance;
+	static Diario instance;// = new Diario();
+	return &instance;
 }
 string civitas::Diario::leerEvento()
 {

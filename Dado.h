@@ -11,7 +11,7 @@ namespace civitas
 	class Dado
 	{
 		private:
-			const static Dado *instance;
+			//const static Dado *instance;
 
 			int ultimoResultado;
 			bool debug;
@@ -23,9 +23,9 @@ namespace civitas
 			//Un singleton no ha de ser clonable
 			Dado(Dado&) = delete;
 			//Un singleton no ha de ser asignable
-			void operator=(const Dado&) = delete;
+			//void operator=(const Dado&) = delete;
 
-			static const Dado* getInstance(bool d);
+			static Dado* getInstance(bool d);
 			int tirar();
 			int quienEmpieza(int n);
 			void setDebug(bool d);

@@ -11,7 +11,7 @@ namespace civitas
 	class SorpresaCasaHotel : public Sorpresa
 	{
 		public:
-			SorpresaCasaHotel(string texto, int valor, MazoSorpresa& mazo);
+			SorpresaCasaHotel(string texto, int valor, MazoSorpresa* mazo);
 			void aplicarAJugador(int actual, vector<Jugador*> todos);
 	};
 

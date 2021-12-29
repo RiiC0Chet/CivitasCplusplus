@@ -1,7 +1,7 @@
 #include "SorpresaPagarCobrar.h"
 
 
-civitas::SorpresaPagarCobrar::SorpresaPagarCobrar(string texto, int valor, MazoSorpresa& mazo) : Sorpresa(texto,valor,mazo) {}
+civitas::SorpresaPagarCobrar::SorpresaPagarCobrar(string texto, int valor, MazoSorpresa* mazo) : Sorpresa(texto,valor,mazo) {}
 
 void civitas::SorpresaPagarCobrar::aplicarAJugador(int actual, vector<Jugador*> todos)
 {

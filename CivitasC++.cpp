@@ -2,10 +2,79 @@
 //
 
 #include <iostream>
+#include "CivitasJuego.h"
+#include <vector>
+#include "SorpresaConvertirme.h"
+
+using namespace std;
+using namespace civitas;
 
 int main()
 {
     std::cout << "Hello World!\n";
+
+    vector<string> nombres;
+    nombres.push_back("Vilma");
+    nombres.push_back("Pedro");
+
+    CivitasJuego *juego = new CivitasJuego(nombres, true);
+    Diario *diario = Diario::getInstance();
+
+    diario->ocurreEvento(juego->getJugadores().at(0)->toString());
+    diario->ocurreEvento(juego->getJugadores().at(1)->toString());
+
+    diario->ocurreEvento("\n ------------------------------ \n");
+
+    diario->ocurreEvento("Turno de " + juego->getJugadorActual()->getNombre());
+
+    juego->getJugadorActual()->moverACasilla(1);
+    juego->getJugadorActual()->puedeComprarCasilla();
+    diario->ocurreEvento(juego->getTablero()->getCasilla(1)->toString());
+
+    diario->ocurreEvento("\n ------------------------------ \n");
+
+    juego->getJugadorActual()->comprar(*((CasillaCalle*)juego->getTablero()->getCasilla(1)));
+
+
+    diario->ocurreEvento("\n ------------------------------ \n");
+
+    diario->ocurreEvento(juego->getJugadores().at(0)->toString());
+    diario->ocurreEvento(juego->getJugadores().at(1)->toString());
+
+    diario->ocurreEvento("\n ------------------------------ \n");
+    
+    SorpresaConvertirme *sorpresa = new SorpresaConvertirme("Convertir Jugador a especulador", 0, nullptr);
+    sorpresa->aplicarAJugador(juego->getIndiceJugadorActual(), juego->getJugadores());
+
+    diario->ocurreEvento(juego->getJugadorActual()->toString());
+    diario->ocurreEvento(juego->getTablero()->getCasilla(1)->toString());
+
+
+    diario->ocurreEvento("\n ------------------------------ \n");
+
+    juego->getJugadorActual()->moverACasilla(2);
+    juego->getJugadorActual()->puedeComprarCasilla();
+    diario->ocurreEvento(juego->getTablero()->getCasilla(2)->toString());
+
+    diario->ocurreEvento("\n ------------------------------ \n");
+
+    juego->getJugadorActual()->comprar(*((CasillaCalle*)juego->getTablero()->getCasilla(1)));
+
+
+    diario->ocurreEvento("\n ------------------------------ \n");
+
+    diario->ocurreEvento(juego->getJugadores().at(0)->toString());
+    diario->ocurreEvento(juego->getJugadores().at(1)->toString());
+
+    diario->ocurreEvento("\n ------------------------------ \n");
+
+    juego->getJugadorActual()->convertir();
+
+    diario->ocurreEvento("\n ------------------------------ \n");
+
+    while (diario->eventosPendientes()) {
+        cout << diario->leerEvento() << endl ;
+    }
 }
 
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar

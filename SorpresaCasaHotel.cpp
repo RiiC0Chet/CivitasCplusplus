@@ -1,6 +1,6 @@
 #include "SorpresaCasaHotel.h"
 
-civitas::SorpresaCasaHotel::SorpresaCasaHotel(string texto, int valor, MazoSorpresa& mazo): Sorpresa(texto,valor,mazo){}
+civitas::SorpresaCasaHotel::SorpresaCasaHotel(string texto, int valor, MazoSorpresa* mazo): Sorpresa(texto,valor,mazo){}
 
 void civitas::SorpresaCasaHotel::aplicarAJugador(int actual, vector<Jugador*> todos)
 {

@@ -6,10 +6,12 @@
 #include "Jugador.h"
 #include "Diario.h"
 
-class MazoSorpresa;
+
 
 namespace civitas
 {
+	class MazoSorpresa;
+
 	class Sorpresa
 	{
 		private:
@@ -24,7 +26,7 @@ namespace civitas
 			}
 
 		public:
-			Sorpresa(string texto, int valor, MazoSorpresa &mazo);
+			Sorpresa(string texto, int valor, MazoSorpresa *mazo);
 			virtual void  aplicarAJugador(int actual, vector<Jugador*> todos)=0;
 
 			inline string toString()

@@ -11,7 +11,7 @@ namespace civitas
 	class SorpresaPagarCobrar : public Sorpresa
 	{
 	public:
-		SorpresaPagarCobrar(string texto, int valor, MazoSorpresa& mazo);
+		SorpresaPagarCobrar(string texto, int valor, MazoSorpresa* mazo);
 		void aplicarAJugador(int actual, vector<Jugador*> todos);
 	};
 
