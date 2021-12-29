@@ -45,7 +45,8 @@ bool civitas::CasillaCalle::esEsteElPropietario(Jugador &jugador)
 {
     if ((&jugador) == propietario)
         return true;
-    else return false;
+    else 
+        return false;
 }
 
 void civitas::CasillaCalle::recibeJugador(int i_actual, vector<Jugador*> todos)

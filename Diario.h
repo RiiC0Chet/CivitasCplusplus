@@ -1,4 +1,3 @@
-//#pragma once
 
 #ifndef DIARIO_H
 #define DIARIO_H

@@ -1,4 +1,3 @@
-//#pragma once
 
 #ifndef SORPRESA_H
 #define SORPRESA_H
@@ -6,6 +5,8 @@
 #include <string>
 #include "Jugador.h"
 #include "Diario.h"
+
+class MazoSorpresa;
 
 namespace civitas
 {
@@ -15,7 +16,7 @@ namespace civitas
 		protected:
 			string texto;
 			int valor;
-			MazoSorpresa mazo;
+			MazoSorpresa *mazo;
 
 			inline void informe(int actual, vector<Jugador*> todos)
 			{

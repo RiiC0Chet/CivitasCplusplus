@@ -1,4 +1,3 @@
-//#pragma once
 
 #ifndef DADO_H
 #define DADO_H

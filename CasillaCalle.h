@@ -1,4 +1,4 @@
-//#pragma once
+
 
 #ifndef CASILLACALLE_H
 #define CASILLACALLE_H 
@@ -73,3 +73,5 @@ namespace civitas
 }
 
 #endif
+
+//#inluce "CasillaCalle_inline.h"

@@ -1,4 +1,3 @@
-//#pragma once
 
 #ifndef JUGADORESPECULADOR_H
 #define JUGADORESPECULADOR_H

@@ -1,4 +1,4 @@
-//#pragma once
+
 #ifndef MAZOSORPRESA_H
 #define MAZOSORPRESA_H
 

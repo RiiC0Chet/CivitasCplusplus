@@ -1,4 +1,4 @@
-//#pragma once
+
 
 #ifndef JUGADOR_H
 #define JUGADOR_H
@@ -76,7 +76,7 @@ namespace civitas
              * 
              * @return JugadorEspeculador
              */
-            JugadorEspeculador* convertir();
+             JugadorEspeculador* convertir();
         public:
             Jugador(string nombre);
             int cantidadCasasHoteles();
@@ -85,7 +85,7 @@ namespace civitas
             bool construirCasa(int ip);
             bool construirHotel(int ip);
             bool enBancarrota();
-            bool existeLaPropiedad(int ip);
+            //bool existeLaPropiedad(int ip);
 
             inline const int getCasasMax() 
             {
@@ -159,6 +159,7 @@ namespace civitas
 	};
 
 }
+
 
 #endif
 

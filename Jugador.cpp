@@ -12,7 +12,7 @@ bool civitas::Jugador::existeLaPropiedad(int ip)
 
 bool civitas::Jugador::puedoEdificarCasa(CasillaCalle &propiedad)
 {
-    if (puedoGastar(propiedad.getPrecioEdificar()) && propiedad.getNumCasas() < CASASPORHOTEL)
+    if (this->puedoGastar(propiedad.getPrecioEdificar()) && propiedad.getNumCasas() < CASASPORHOTEL)
         return true;
     else 
         return false;
@@ -20,7 +20,7 @@ bool civitas::Jugador::puedoEdificarCasa(CasillaCalle &propiedad)
 
 bool civitas::Jugador::puedoEdificarHotel(CasillaCalle &propiedad)
 {
-    if (puedoGastar(propiedad.getPrecioEdificar()) && propiedad.getNumHoteles() < HOTELESMAX && propiedad.getNumCasas() == CASASPORHOTEL)
+    if (this->puedoGastar(propiedad.getPrecioEdificar()) && propiedad.getNumHoteles() < HOTELESMAX && propiedad.getNumCasas() == CASASPORHOTEL)
         return true;
     else 
         return false;
@@ -68,21 +68,21 @@ bool civitas::Jugador::comprar(CasillaCalle& titulo)
 {
     bool result = false;
 
-    if (puedeComprar) {
+    if (this->puedeComprar) {
 
         float precio = titulo.getPrecioCompra();
 
-        if (puedoGastar(precio)) 
+        if (this->puedoGastar(precio)) 
         {
             result = titulo.comprar(*this);
             propiedades.push_back(&titulo);
-            Diario::getInstance()->ocurreEvento("El jugador " + nombre + " compra la propiedad " + titulo.getNombre());
-            puedeComprar = false;
+            Diario::getInstance()->ocurreEvento("El jugador " + this->nombre + " compra la propiedad " + titulo.getNombre());
+            this->puedeComprar = false;
 
         }
 
         else
-            Diario::getInstance()->ocurreEvento("El jugador" + nombre + " no tiene saldo para comprar la propiedad " + titulo.getNombre() );
+            Diario::getInstance()->ocurreEvento("El jugador" + this->nombre + " no tiene saldo para comprar la propiedad " + titulo.getNombre() );
 
     }
 
@@ -145,13 +145,6 @@ bool civitas::Jugador::enBancarrota()
         return true;
     else 
         return false;
-}
-
-bool civitas::Jugador::existeLaPropiedad(int ip)
-{
-    if (propiedades.at(ip)->esEsteElPropietario(*this))
-        return true;
-    else return false;
 }
 
 float civitas::Jugador::modificarSaldo(float cantidad)
@@ -217,8 +210,10 @@ bool civitas::Jugador::tieneAlgoQueGestionar()
         return false;
 }
 
-JugadorEspeculador& civitas::Jugador::convertir()
+civitas::JugadorEspeculador* civitas::Jugador::convertir()
 {
     Diario::getInstance()->ocurreEvento("El jugador " + nombre + " se ha convertido en especulador.");
-    return new JugadorEspeculador(*this);
+    JugadorEspeculador *aux= new JugadorEspeculador(*this);
+
+    return aux;
 }

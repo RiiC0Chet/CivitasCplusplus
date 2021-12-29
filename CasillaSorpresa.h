@@ -1,4 +1,3 @@
-//#pragma once
 
 #ifndef CASILLASORPRESA_H
 #define CASILLASORPRESA_H 

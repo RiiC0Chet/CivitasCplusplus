@@ -3,7 +3,7 @@
 civitas::CasillaSorpresa::CasillaSorpresa(string nombre, MazoSorpresa &mazo):Casilla(nombre)
 {
 	sorpresa = nullptr;
-	mazo = &mazo;
+	this->mazo = &mazo;
 }
 
 void civitas::CasillaSorpresa::recibeJugador(int i_actual, vector<Jugador*> todos)
