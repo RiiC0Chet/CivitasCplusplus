@@ -76,6 +76,8 @@ namespace civitas
 			void avanzaJugador();
 			OperacionJuego siguientePaso();
 			bool comprar();
+
+			~CivitasJuego();
 	};
 
 }

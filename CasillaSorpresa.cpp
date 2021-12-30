@@ -26,3 +26,9 @@ bool civitas::CasillaSorpresa::igualdadEstado(CasillaSorpresa &otraCasilla)
     }
 }
 
+
+civitas::CasillaSorpresa::~CasillaSorpresa()
+{
+	delete[] sorpresa;
+	delete[] mazo;
+}

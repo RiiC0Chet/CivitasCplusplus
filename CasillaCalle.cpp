@@ -106,3 +106,8 @@ string civitas::CasillaCalle::toString()
     else 
         return  (Casilla::toString()+" con el propietario " + propietario->getNombre());
 }
+
+civitas::CasillaCalle::~CasillaCalle()
+{
+    delete[] propietario;
+}

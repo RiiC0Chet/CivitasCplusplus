@@ -166,3 +166,15 @@ bool civitas::CivitasJuego::comprar()
 
     return res;
 }
+
+
+civitas::CivitasJuego::~CivitasJuego()
+{
+    delete[] tablero;
+    delete[] mazo;
+    delete[] gs;
+    delete[] dado;
+
+    for (int i = 0; i < jugadores.size(); ++i)
+        delete[] jugadores.at(i);
+}

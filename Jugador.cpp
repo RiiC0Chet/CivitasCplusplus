@@ -218,3 +218,10 @@ civitas::Jugador* civitas::Jugador::convertir()
 
     return new JugadorEspeculador(*this);
 }
+
+
+civitas::Jugador::~Jugador()
+{
+    for (int i = 0; i < propiedades.size(); ++i)
+        delete[] propiedades.at(i);
+}

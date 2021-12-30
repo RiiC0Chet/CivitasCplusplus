@@ -30,13 +30,13 @@ namespace civitas
             {
                 actualizaPropiedadesPorConversion(*this);
             }
-            inline int getHOTELESMAX() 
+            const inline int getHOTELESMAX() 
             {
                 return HOTELESMAX * FACTORESPECULADOR;
             }
 
             
-            inline int getCasasMax() 
+            const inline int getCasasMax() 
             {
                 return CASASMAX * FACTORESPECULADOR;
             }
@@ -60,6 +60,8 @@ namespace civitas
             {
                 return (Jugador::toString() + " Es un jugador especulador.");
             }
+
+            inline virtual ~JugadorEspeculador() {}
 	};
 }
 

@@ -30,6 +30,8 @@ namespace civitas
 			}
 
 			int nuevaPosicion(int actual, int tirada);
+
+			~Tablero();
 	};
 }
 

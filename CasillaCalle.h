@@ -68,6 +68,8 @@ namespace civitas
 			}
 
 			string toString();
+
+			virtual ~CasillaCalle();
 	};
 
 }

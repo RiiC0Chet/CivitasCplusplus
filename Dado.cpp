@@ -3,15 +3,10 @@
 #include <ctime>
 #include <iostream>
 
-civitas::Dado:: Dado(bool d) :debug(d), ultimoResultado(0)
-{
-	//this->instance = nullptr;
-}
+civitas::Dado:: Dado(bool d) :debug(d), ultimoResultado(0){}
 
 civitas::Dado* civitas::Dado::getInstance(bool d)
 {
-	//if (instance == nullptr)
-		//instance = new Dado(d);
 	static Dado instance(d);
 	return &instance;
 }

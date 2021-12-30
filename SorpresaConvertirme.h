@@ -13,6 +13,7 @@ namespace civitas
 	public:
 		SorpresaConvertirme(string texto, int valor, MazoSorpresa* mazo);
 		void aplicarAJugador(int actual, vector<Jugador*> todos);
+		inline virtual ~SorpresaConvertirme() {}
 	};
 
 }

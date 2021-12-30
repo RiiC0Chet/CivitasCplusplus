@@ -13,6 +13,7 @@ namespace civitas
 	public:
 		SorpresaPagarCobrar(string texto, int valor, MazoSorpresa* mazo);
 		void aplicarAJugador(int actual, vector<Jugador*> todos);
+		inline virtual ~SorpresaPagarCobrar() {}
 	};
 
 }

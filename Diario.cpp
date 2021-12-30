@@ -1,9 +1,6 @@
 #include "Diario.h"
 civitas::Diario* civitas::Diario::getInstance()
 {
-	//if (instance == nullptr)
-		//instance = new Diario();
-
 	static Diario instance;// = new Diario();
 	return &instance;
 }

@@ -33,6 +33,8 @@ namespace civitas
 			{
 				return texto;
 			}
+
+			virtual ~Sorpresa();
 	};
 
 }

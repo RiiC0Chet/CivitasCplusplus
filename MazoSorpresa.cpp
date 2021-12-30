@@ -53,3 +53,10 @@ civitas::Sorpresa* civitas::MazoSorpresa::siguiente()
     return auxiliar;
 }
 
+
+
+civitas::MazoSorpresa::~MazoSorpresa()
+{
+    for (int i = 0; i < sorpresas.size(); ++i)
+        delete[] sorpresas.at(i);
+}

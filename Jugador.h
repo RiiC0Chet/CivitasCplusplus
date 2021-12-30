@@ -77,13 +77,13 @@ namespace civitas
             Jugador(string nombre);
             int cantidadCasasHoteles();
             int compareTo(Jugador &otro);
-            bool comprar(CasillaCalle &titulo);
+            bool virtual comprar(CasillaCalle &titulo);
             bool construirCasa(int ip);
             bool construirHotel(int ip);
             bool enBancarrota();
             //bool existeLaPropiedad(int ip);
 
-            inline const int getCasasMax() 
+            inline virtual const int getCasasMax()
             {
                 return CASASMAX;
             }
@@ -103,7 +103,7 @@ namespace civitas
                 return casillaActual;
             }
 
-            inline const int getHOTELESMAX() 
+            inline virtual const int getHOTELESMAX() 
             {
                 return HOTELESMAX;
             }
@@ -135,7 +135,7 @@ namespace civitas
 
             float modificarSaldo(float cantidad);
             bool moverACasilla(int num_Casilla);
-            float paga(float cantidad);
+            float virtual paga(float cantidad);
             float pagaAlquiler(float cantidad);
             bool pasaPorSalida();
             bool puedeComprarCasilla();
@@ -156,10 +156,12 @@ namespace civitas
              */
             Jugador* convertir();
 
-            inline string toString()
+            inline virtual string toString()
             {
                 return ("Nombre: " + nombre + ". Saldo: " + to_string(saldo) + ". Posicion: " + to_string(casillaActual) + ". Num Propiedades: " + to_string(propiedades.size()) );
             }
+
+            virtual ~Jugador();
 	};
 
 }

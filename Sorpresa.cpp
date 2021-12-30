@@ -6,3 +6,9 @@ civitas::Sorpresa::Sorpresa(string texto, int valor, MazoSorpresa* mazo)
     this->valor = valor;
     this->mazo = mazo;
 }
+
+
+civitas::Sorpresa::~Sorpresa()
+{
+	delete[] mazo;
+}

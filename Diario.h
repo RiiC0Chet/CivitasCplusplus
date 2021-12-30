@@ -13,15 +13,11 @@ namespace civitas
 	class Diario
 	{
 		private:
-			//static Diario* instance;
 			vector<string> eventos;
 			//GestorEstados gs = new GestorEstados();
 
 			// Constructores singleton privados
-			inline Diario()
-			{
-				//this->instance = nullptr;
-			}
+			inline Diario(){}
 
 		public:
 

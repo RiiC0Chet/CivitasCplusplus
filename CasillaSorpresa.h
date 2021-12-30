@@ -28,6 +28,8 @@ namespace civitas
 			{
 				return Casilla::toString() + " de tipo sorpresa";
 			}
+
+			virtual ~CasillaSorpresa();
 	};
 }
 

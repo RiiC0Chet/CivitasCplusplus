@@ -26,6 +26,8 @@ namespace civitas
 			MazoSorpresa();
 			void alMazo(Sorpresa *s);
 			Sorpresa* siguiente();
+
+			~MazoSorpresa();
 	};
 
 }

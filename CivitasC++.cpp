@@ -5,13 +5,18 @@
 #include "CivitasJuego.h"
 #include <vector>
 #include "SorpresaConvertirme.h"
+#include "VistaTextual.h"
+#include "Controlador.h"
 
 using namespace std;
 using namespace civitas;
+using namespace vistaTextualCivitas;
+using namespace controladorCivitas;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    /*
+    std::cout << "PRUEBA TEST P4\n"<< endl;
 
     vector<string> nombres;
     nombres.push_back("Vilma");
@@ -75,6 +80,21 @@ int main()
     while (diario->eventosPendientes()) {
         cout << diario->leerEvento() << endl ;
     }
+    */
+
+    cout <<"PRUEBA DE JUEGO REAL YA FULL TERMINADO: falta destructores "<<endl;
+
+    vector<string> jugadores;
+    jugadores.push_back("Rico");
+    jugadores.push_back("Duva");
+    jugadores.push_back("Migue");
+    jugadores.push_back("Garban");
+
+    CivitasJuego *juego = new CivitasJuego(jugadores, true);
+    VistaTextual *vista = new VistaTextual(*juego);
+    Controlador *controlador = new Controlador(*juego, *vista);
+
+    controlador->juega();
 }
 
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar

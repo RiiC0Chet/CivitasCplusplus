@@ -11,7 +11,6 @@ namespace civitas
 	class Dado
 	{
 		private:
-			//const static Dado *instance;
 
 			int ultimoResultado;
 			bool debug;

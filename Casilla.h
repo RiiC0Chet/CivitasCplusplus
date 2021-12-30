@@ -35,7 +35,7 @@ namespace civitas
 			Diario::getInstance()->ocurreEvento("El jugador " + todos.at(i_actual)->getNombre() + " ha caido en la casilla: " + this->toString());
 		}
 
-		inline void recibeJugador(int i_actual, vector<Jugador*> todos)
+		inline virtual void recibeJugador(int i_actual, vector<Jugador*> todos)
 		{
 			informe(i_actual, todos);
 		}
@@ -44,10 +44,14 @@ namespace civitas
 
 		bool igualdadEstado(Casilla &otraCasilla);
 
-		inline string toString() 
+		inline virtual string toString() 
 		{
 			return "Casilla: " + nombre;
 		}
+
+		inline virtual ~Casilla()
+		{}
+
 	};
 
 

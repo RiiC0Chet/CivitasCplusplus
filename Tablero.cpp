@@ -53,3 +53,8 @@ bool civitas::Tablero::correcto(int numCasilla)
         return false;
 }
 
+civitas::Tablero::~Tablero()
+{
+    for (int i = 0; i < tablero.size(); ++i)
+        delete[] tablero.at(i);
+}
