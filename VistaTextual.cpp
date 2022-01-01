@@ -140,7 +140,8 @@ void VistaTextual::mostrarEstado()
         int casilla_actual = juegoModel->getJugadorActual()->_getCasillaActual();
         cout << ("Estado actual:")<<endl;
         cout << (nombre)<<endl;
-        cout << ("Casilla: " + casilla_actual)<<endl;
+        cout.flush();
+        cout << ("Casilla: " + to_string(casilla_actual) )<<endl;
 
 
     }
