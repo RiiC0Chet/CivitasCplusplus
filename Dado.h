@@ -22,7 +22,7 @@ namespace civitas
 			//Un singleton no ha de ser clonable
 			Dado(Dado&) = delete;
 			//Un singleton no ha de ser asignable
-			//void operator=(const Dado&) = delete;
+			void operator=(const Dado&) = delete;
 
 			static Dado* getInstance(bool d);
 			int tirar();

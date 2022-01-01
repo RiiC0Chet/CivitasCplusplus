@@ -141,7 +141,7 @@ void VistaTextual::mostrarEstado()
         cout << ("Estado actual:")<<endl;
         cout << (nombre)<<endl;
         cout.flush();
-        cout << ("Casilla: " + to_string(casilla_actual) )<<endl;
+        cout << (juegoModel->getTablero()->getTodasCasillas().at(casilla_actual)->toString()  )<<endl;
 
 
     }

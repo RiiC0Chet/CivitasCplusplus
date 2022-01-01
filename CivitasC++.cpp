@@ -90,7 +90,7 @@ int main()
     jugadores.push_back("Migue");
     jugadores.push_back("Garban");
 
-    CivitasJuego *juego = new CivitasJuego(jugadores, true);
+    CivitasJuego *juego = new CivitasJuego(jugadores, false);
     VistaTextual *vista = new VistaTextual(*juego);
     Controlador *controlador = new Controlador(*juego, *vista);
 
