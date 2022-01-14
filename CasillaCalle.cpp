@@ -109,5 +109,5 @@ string civitas::CasillaCalle::toString()
 
 civitas::CasillaCalle::~CasillaCalle()
 {
-    delete[] propietario;
+    propietario = nullptr;
 }

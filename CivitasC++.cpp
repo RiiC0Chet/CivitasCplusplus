@@ -82,7 +82,7 @@ int main()
     }
     */
 
-    cout <<"PRUEBA DE JUEGO REAL YA FULL TERMINADO: falta destructores "<<endl;
+    cout <<"PRUEBA DE JUEGO REAL YA FULL TERMINADO"<<endl;
 
     vector<string> jugadores;
     jugadores.push_back("Rico");

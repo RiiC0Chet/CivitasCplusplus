@@ -49,8 +49,7 @@ namespace civitas
 			return "Casilla: " + nombre;
 		}
 
-		inline virtual ~Casilla()
-		{}
+		inline virtual ~Casilla(){}
 
 	};
 

@@ -10,5 +10,5 @@ civitas::Sorpresa::Sorpresa(string texto, int valor, MazoSorpresa* mazo)
 
 civitas::Sorpresa::~Sorpresa()
 {
-	delete[] mazo;
+	mazo = nullptr;
 }
